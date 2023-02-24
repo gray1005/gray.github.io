@@ -6,22 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> gray's primary page</title>
         <!-- CSS -->
-        <style>
-            body {
-                background-color: black;
-            }
+    <style>
+        body {
+            background-color: black;
+        }
             
-            h1 {
-                text-align: center;
-            }
-            
-            p {
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                font-size: 20px;
-                color: white;
-            }
-        </style>
+        h1 {
+            background-color: black;
+            text-align: center;
+        }
+        
+        p {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+            color: white;
+        }
+    </style>
 
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+
+    <script>
+                
+        $.getJSON("https://api.ipify.org?format=json", function(data) {     
+            $("#gfg").html(data.ip);
+        })
+
+    </script>
 </head>
 <body>
 
@@ -29,5 +39,8 @@
 
     <h1> Holy shit I think I'm gay </h1>
     <p> Yep I am... </p>
+    <p> anyways, I'll help u with remembering ur public IPv4 address!</p>
+
+    <p id = 'gfg'></p>
 </body>
 </html>
